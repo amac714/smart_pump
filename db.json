@@ -41,7 +41,7 @@
       "guid": "d5464d51-b4bf-4a4b-a5f7-fc2c8933ab45",
       "isActive": true,
       "balance": "$1,668.20",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80",
       "age": 33,
       "eyeColor": "green",
       "name": {
@@ -59,7 +59,7 @@
       "guid": "5a98f752-22fe-499c-8288-ad0218c89552",
       "isActive": true,
       "balance": "$1,656.46",
-      "picture": "http://placehold.it/32x32",
+      "picture": "http://placehold.it/300x300",
       "age": 35,
       "eyeColor": "brown",
       "name": {

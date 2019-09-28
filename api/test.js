@@ -3,13 +3,13 @@
 const supertest = require('supertest');
 const should = require('should');
 
-const server = supertest.agent('http://localhost:3000');
+const server = supertest.agent('http://localhost:5000');
 
 describe('API', () => {
   describe('Login', () => {
     const validUserInfo = {
-      email: 'ruby.glenn@waterbaby.co.uk',
-      password: 'red^adl4',
+      email: 'henderson.briggs@geeknet.net',
+      password: '23derd*334',
     };
 
     it('should login user and return status 200 with success = true', done => {
@@ -36,7 +36,7 @@ describe('API', () => {
         .end((err, res) => {
           if (err) done(err);
           res.status.should.equal(400);
-          res.body.error.should.equal('Email or password is invalid.');
+          res.body.error.should.equal('Email or Password is incorrect.');
           done();
         });
     });
@@ -53,6 +53,40 @@ describe('API', () => {
         .end((err, res) => {
           if (err) done(err);
           res.status.should.equal(422);
+          done();
+        });
+    });
+  });
+
+  describe('GET /user', () => {
+    const user = {
+      email: 'lott.kramer@poshome.us',
+      password: '34oii+345',
+    };
+    
+    let token;
+
+    // must log in first to get token
+    before(done => {
+      server
+        .post('/api/login')
+        .send(user)
+        .end((err, res) => {
+          if(err) throw err;
+          token = {
+            Authorization: res.body.token
+          };
+          done();
+        });
+    });
+
+    it('should return user data with status 200', done => {
+      server
+        .get('/api/user')
+        .set(token)
+        .end((err, res) => {
+          if(err) done(err);
+          res.status.should.equal(200);
           done();
         });
     });

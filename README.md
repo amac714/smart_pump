@@ -1,3 +1,15 @@
+# Instructions to start Demo
+Client was made using React.js
+
+Node server uses `port = 5000` because client uses `port = 3000`
+
+`npm install` in root folder and inside client to install dependencies
+
+`npm run dev` starts both server and client because app uses `concurrently`
+
+`npm run test` to run unit tests for API
+
+
 # Simple Developer Exercise 
 
 The savvy cats over at SMART Pump would like to be able to allow users to login to their account, check their balance and update their personal details. Write a simple web application (API and UI) using node.js and lowdb that lets users accomplish those tasks. 
