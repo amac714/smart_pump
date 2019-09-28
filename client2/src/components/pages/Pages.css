@@ -1,0 +1,41 @@
+/* Logo and login */
+.logo,
+.login {
+  display: block;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 400px;
+  width: 50%;
+}
+
+/* Login error message */
+.alert {
+  text-align: center;
+}
+
+.profile {
+  margin: auto;
+  width: 50%;
+}
+
+.inner-profile {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  /* height: 200px; */
+}
+
+.balance {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.edit-btn,
+.badge,
+.edit-h3 {
+  text-transform: uppercase;
+}
